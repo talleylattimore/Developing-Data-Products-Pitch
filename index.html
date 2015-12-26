@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Course Project">
+  <meta name="author" content="Talley Lattimore">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Course Project</h1>
+    <h2>Reproducible Pitch</h2>
+    <p>Talley Lattimore<br/>student</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Developing Data Products Pitch</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Talley Lattimore
+26 December 2015</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>American football is hugely popular and statistics are becoming an increasingly important part of this.</li>
+<li>Players, coaches, analysts, and fans are trying to figure out how best to measure and predict performance.</li>
+<li>Adjusted Net Yards per Attempt (ANY/A) is one of the best and simplest statistics used to measure passing.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>ANY/A</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>ANY/A takes into account all aspects of passing.</li>
+<li>It accounts for touchdowns and interceptions and subtracts sack yards from passing yards.</li>
+<li>It does not control for defense.</li>
+<li>It does not control for situation.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Yards per Attempt Can Be Misleading</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Much like 2 datasets with the same mean and variance can be very different, 2 quarterbacks with the same Yards per Attempt can be very different.</li>
+<li>Let&#39;s imagine 2 quartbacks, A and B, both average 10 yards per attempt. At first glimpse they appear identical.</li>
+<li>However, a closer look reveals major differences:</li>
+<li>A: 3000 yds, 300 attempts, 30 touchdowns, 5 interceptions</li>
+<li>B: 1000 yds, 100 attempts, 4 touchdowns, 5 interceptions</li>
+</ul>
+
+<pre><code>## [1] &quot;A:  10 Y/A,  11.25  ANY/A&quot;
+</code></pre>
+
+<pre><code>## [1] &quot;B:  10 Y/A,  8.55  ANY/A&quot;
+</code></pre>
+
+<ul>
+<li>A and B have identical Yards per Attempt, but ANY/A goes further and shows the differences between them.</li>
+<li>These quarter backs are obviously very different with A being far more productive.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Explanation</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>ANY/A is not a mystery like some other advanced statistics.</li>
+<li>It is calculated with a simple equation.</li>
+<li>(Yards + (TDs * 20) - (Ints * 45) - SackYards)/(Atts + Sacks)</li>
+<li>The multipliers for TDs and Ints were not chosen at random.</li>
+<li>Chase Stuart that a TD pass was equivalent to a 20 yard gain while an Int was equivalent to a 45 yd loss.</li>
+<li>ANY/A is a simple stastic, but it is a hassle to calculate. This app does that calculation for you.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Developing Data Products Pitch'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Introduction'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='ANY/A'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Yards per Attempt Can Be Misleading'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Explanation'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
